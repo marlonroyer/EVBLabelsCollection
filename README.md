@@ -24,7 +24,7 @@ Sistema profissional para geração de etiquetas de herbário a partir de arquiv
 - [html2canvas 1.4.1](https://html2canvas.hertzen.com/) - Captura de elementos HTML
 - [Font Awesome 6.4.0](https://fontawesome.com/) - Ícones da interface
 
-## 📋 Estrutura do CSV
+## Estrutura do CSV
 
 O arquivo CSV deve conter as seguintes colunas:
 
@@ -34,13 +34,7 @@ O arquivo CSV deve conter as seguintes colunas:
 | Família | Nome(s) científico(s) | Asteraceae |
 | Intervalos | Intervalo(s) de coleta | 1000-1500m |
 
-### Exemplo de CSV:
-```csv
-ID,Família,Intervalos
-CX-001,Asteraceae,1000-1500m
-CX-002,Fabaceae,500-800m
-CX-003,Orchidaceae,200-400m
-🎯 Como Usar
+## Como Usar
 1. Carregue o CSV
 Arraste e solte o arquivo CSV na área de upload
 
@@ -63,7 +57,7 @@ Clique em "Gerar PDF" para baixar todas as etiquetas
 
 Formato A4 paisagem com 2 etiquetas por linha
 
-🎨 Design da Etiqueta
+Design da Etiqueta
 Cada etiqueta possui:
 
 Dimensões: 14cm × 10cm
@@ -78,7 +72,7 @@ Logo: Imagem com 50% de opacidade no canto inferior direito
 
 Títulos: Barra cinza unificada para FAMÍLIA(S) e INTERVALO(S)
 
-📁 Estrutura do Projeto
+## Estrutura do Projeto
 evb-labels/
 ├── index.html          # Página principal
 ├── styles.css          # Estilos da aplicação
@@ -86,7 +80,7 @@ evb-labels/
 ├── LogoEVB.png         # Logo do herbário
 └── README.md           # Documentação
 
-🔧 Personalização
+## Personalização
 
 Alterar o Logo
 Substitua o arquivo LogoEVB.png na raiz do projeto.
@@ -103,7 +97,7 @@ No arquivo script.js, modifique:
 
 idInicio = 'CX-' + idInicio.padStart(3, '0');
 
-🤝 Contribuindo
+## Contribuindo
 Faça um Fork do projeto
 
 Crie uma Branch (git checkout -b feature/NovaFuncionalidade)
@@ -114,10 +108,10 @@ Push para a Branch (git push origin feature/NovaFuncionalidade)
 
 Abra um Pull Request
 
-📝 Licença
+## Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-👨‍💻 Autor
+## Autor
 Marlon Royer - Herbário Evaldo Buttura (EVB)
 
 EVB Labels © 2026 - Desenvolvido para a comunidade botânica
@@ -130,4 +124,4 @@ Para salvar como arquivo .md:
 4. Salve como `README.md` (certifique-se de selecionar "Todos os arquivos" no tipo)
 5. Coloque na raiz do seu projeto
 
-O arquivo está pronto para uso! 📄
+O arquivo está pronto para uso! 
