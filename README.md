@@ -24,16 +24,6 @@ Sistema profissional para geração de etiquetas de herbário a partir de arquiv
 - [html2canvas 1.4.1](https://html2canvas.hertzen.com/) - Captura de elementos HTML
 - [Font Awesome 6.4.0](https://fontawesome.com/) - Ícones da interface
 
-## Estrutura do CSV
-
-O arquivo CSV deve conter as seguintes colunas:
-
-| Coluna | Descrição | Exemplo |
-|--------|-----------|---------|
-| ID | Identificador único | CX-001 |
-| Família | Nome(s) científico(s) | Asteraceae |
-| Intervalos | Intervalo(s) de coleta | 1000-1500m |
-
 ## Como Usar
 1. Carregue o CSV
 Arraste e solte o arquivo CSV na área de upload
