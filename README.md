@@ -25,32 +25,32 @@ Sistema para geração de etiquetas de herbário a partir de arquivos CSV. Desen
 - [Font Awesome 6.4.0](https://fontawesome.com/) - Ícones da interface
 
 ## Como Usar
-- **Carregue o CSV
+- **Carregue o CSV**
 Arraste e solte o arquivo CSV na área de upload
 Ou clique em "Selecionar Arquivo"
 
-- **Configure o Filtro
+- **Configure o Filtro**
 Digite o ID inicial (apenas números, ex: 001)
 Digite o ID final (apenas números, ex: 024)
 
-- **Clique em "Filtrar Etiquetas"
+- **Clique em "Filtrar Etiquetas"**
 
-- **Visualize as Etiquetas
+- **Visualize as Etiquetas**
 As etiquetas aparecerão na área de pré-visualização
 Cada etiqueta mostra: ID, Família(s) e Intervalo(s)
 
-- **Gere o PDF
+- **Gere o PDF**
 Clique em "Gerar PDF" para baixar todas as etiquetas
 Formato A4 paisagem com 2 etiquetas por linha
 Design da Etiqueta
 Cada etiqueta possui:
 
-- **Dimensões: 14cm × 10cm
-- **Cabeçalho: ID da caixa (ex: CX-001)
-- **Coluna Esquerda (35%): Famílias (negrito, alinhado à direita)
-- **Coluna Direita (65%): Intervalos (itálico, alinhado à esquerda)
-- **Logo: Imagem com 50% de opacidade no canto inferior direito
-- **Títulos: Barra cinza unificada para FAMÍLIA(S) e INTERVALO(S)
+- **Dimensões: 14cm × 10cm**
+- **Cabeçalho: ID da caixa (ex: CX-001)**
+- **Coluna Esquerda (35%): Famílias (negrito, alinhado à direita)**
+- **Coluna Direita (65%): Intervalos (itálico, alinhado à esquerda)**
+- **Logo: Imagem com 50% de opacidade no canto inferior direito**
+- **Títulos: Barra cinza unificada para FAMÍLIA(S) e INTERVALO(S)**
 
 ## Estrutura do Projeto
 evb-labels/
@@ -61,9 +61,8 @@ evb-labels/
 └── README.md           # Documentação
 
 ## Licença
-- **Este projeto está sob a licença MIT.
+- **Este projeto está sob a licença MIT.**
 
 ## Autor
-- **Marlon Royer de Morais - Herbário Evaldo Buttura (EVB)
-
-- **EVB LabelsCollection -2026 - Desenvolvido para uso interno
+- **Marlon Royer de Morais - Herbário Evaldo Buttura (EVB)**
+- **EVB LabelsCollection -2026 - Desenvolvido para uso interno**
