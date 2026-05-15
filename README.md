@@ -1,109 +1,133 @@
-# EVB LabelsCollection - Gerador de Etiquetas da Coleção do Herbário Evaldo Buttura
- 
-Sistema web para geração automatizada de etiquetas para o Herbário Evaldo Buttura (EVB). Importa dados de planilhas CSV, permite filtrar por intervalo de IDs e exporta etiquetas formatadas em PDF.
+# 🏷️ EVB Labels - Gerador de Etiquetas de Herbário
 
-## Funcionalidades
+![Version](https://img.shields.io/badge/version-1.0.0-gold)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-production-brightgreen)
 
-- **Importação de CSV** - Carregue planilhas com dados de famílias, intervalos e códigos
-- **Filtro Inteligente** - Filtre etiquetas por intervalo de IDs (digite apenas os números)
-- **Pré-visualização** - Visualize as etiquetas antes de gerar o PDF
-- **Exportação PDF** - Gere PDF em formato A4 paisagem com 2 etiquetas por linha
-- **Ajuste Automático** - Tamanho da fonte se adapta automaticamente ao conteúdo
-- **Logo Personalizada** - Inclui logo do EVB com transparência configurável
+Sistema profissional para geração de etiquetas de herbário a partir de arquivos CSV. Desenvolvido para uso interno do **Herbário Evaldo Buttura (EVB)**.
 
-## Tecnologias Utilizadas
+## ✨ Funcionalidades
 
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **Bibliotecas:**
-  - [PapaParse](https://www.papaparse.com/) - Parsing de CSV
-  - [jsPDF](https://github.com/parallax/jsPDF) - Geração de PDF
-  - [html2canvas](https://html2canvas.hertzen.com/) - Captura de HTML para imagem
-  - [Font Awesome](https://fontawesome.com/) - Ícones
+- 📂 **Upload de CSV** - Carregue planilhas com dados taxonômicos e de coleta
+- 🔍 **Filtro Inteligente** - Filtre etiquetas por intervalo de IDs usando apenas números
+- 🎨 **Pré-visualização em Tempo Real** - Visualize as etiquetas exatamente como serão impressas
+- 📄 **Geração de PDF** - Exporte etiquetas em formato A4 paisagem (2 por linha)
+- 🖨️ **Layout Profissional** - Etiquetas padronizadas de 14cm × 10cm
+- 🎯 **Ajuste Automático de Fonte** - O texto se adapta ao espaço disponível
+- 🏞️ **Logo Personalizada** - Suporte a marca d'água com transparência
+- 🎪 **Interface Moderna** - Design glassmorphism com paleta de cores profissional
 
-## Pré-requisitos
+## 🚀 Tecnologias Utilizadas
 
-- Navegador web moderno (Chrome, Firefox, Edge)
-- Arquivo CSV com as seguintes colunas:
-  - `ID` - Identificador único (ex: CX-001)
-  - `Família` - Nome(s) da(s) família(s)
-  - `Intervalos` - Intervalo(s) de coleta
-  - `Código` - Código de localização (Armário, Prateleira, Espaço)
-- Arquivo de logo: `LogoEVB.png` (na mesma pasta do projeto)
+- [PapaParse 5.3.0](https://www.papaparse.com/) - Parsing de arquivos CSV
+- [jsPDF 2.5.1](https://github.com/parallax/jsPDF) - Geração de documentos PDF
+- [html2canvas 1.4.1](https://html2canvas.hertzen.com/) - Captura de elementos HTML
+- [Font Awesome 6.4.0](https://fontawesome.com/) - Ícones da interface
 
-Como Usar
-1. Carregar Planilha CSV
+## 📋 Estrutura do CSV
+
+O arquivo CSV deve conter as seguintes colunas:
+
+| Coluna | Descrição | Exemplo |
+|--------|-----------|---------|
+| ID | Identificador único | CX-001 |
+| Família | Nome(s) científico(s) | Asteraceae |
+| Intervalos | Intervalo(s) de coleta | 1000-1500m |
+
+### Exemplo de CSV:
+```csv
+ID,Família,Intervalos
+CX-001,Asteraceae,1000-1500m
+CX-002,Fabaceae,500-800m
+CX-003,Orchidaceae,200-400m
+🎯 Como Usar
+1. Carregue o CSV
 Arraste e solte o arquivo CSV na área de upload
 
-Ou clique em "Selecionar Arquivo" para buscar no computador
+Ou clique em "Selecionar Arquivo"
 
-2. Filtrar Etiquetas
-Digite o ID Inicial (apenas os dígitos, ex: 001 ou 1)
+2. Configure o Filtro
+Digite o ID inicial (apenas números, ex: 001)
 
-Digite o ID Final (apenas os dígitos, ex: 024 ou 24)
+Digite o ID final (apenas números, ex: 024)
 
-Clique em Filtrar Etiquetas
+Clique em "Filtrar Etiquetas"
 
-3. Visualizar e Gerar PDF
+3. Visualize as Etiquetas
 As etiquetas aparecerão na área de pré-visualização
 
-Verifique se estão corretas
+Cada etiqueta mostra: ID, Família(s) e Intervalo(s)
 
-Clique em Gerar PDF para baixar o arquivo
+4. Gere o PDF
+Clique em "Gerar PDF" para baixar todas as etiquetas
 
-Formato do CSV
-O arquivo CSV deve seguir este formato:
+Formato A4 paisagem com 2 etiquetas por linha
 
-csv
-ID,Família,Intervalos,Código
-CX-001,Myrtaceae,"100-200m, Brasil",A1-P2-E3
-CX-002,Fabaceae,"300-500m, Argentina",A1-P2-E4
-CX-003,Solanaceae,"0-100m, Paraguai",A2-P1-E1
-Colunas Obrigatórias:
-Coluna	Descrição	Exemplo
-ID	Identificador único	CX-001
-Família	Nome da família botânica	Myrtaceae
-Intervalos	Intervalos de coleta	100-200m, Brasil
-Código	Localização física	A1-P2-E3
-Nota: O código de localização (Armário, Prateleira, Espaço) NÃO é exibido nas etiquetas, apenas o ID é mostrado.
-
-Design da Etiqueta
+🎨 Design da Etiqueta
 Cada etiqueta possui:
 
-Dimensões: 14cm × 10cm (paisagem)
+Dimensões: 14cm × 10cm
 
-Coluna Esquerda (35%): ID e lista de Famílias
+Cabeçalho: ID da caixa (ex: CX-001)
 
-Coluna Direita (65%): ID (oculto) e lista de Intervalos
+Coluna Esquerda (35%): Famílias (negrito, alinhado à direita)
 
-Logo: Canto inferior direito com opacidade 50%
+Coluna Direita (65%): Intervalos (itálico, alinhado à esquerda)
 
-Fundo cinza unificado: Barra contínua nos títulos "FAMÍLIA(S)" e "INTERVALO(S)"
+Logo: Imagem com 50% de opacidade no canto inferior direito
 
-Estrutura do Projeto
-├── index.html          # Interface principal
+Títulos: Barra cinza unificada para FAMÍLIA(S) e INTERVALO(S)
+
+📁 Estrutura do Projeto
+evb-labels/
+├── index.html          # Página principal
 ├── styles.css          # Estilos da aplicação
-├── script.js           # Lógica de funcionamento
+├── script.js           # Lógica do gerador
 ├── LogoEVB.png         # Logo do herbário
 └── README.md           # Documentação
 
-Funcionalidades Detalhadas
-Ajuste Automático de Fonte
-O sistema testa tamanhos de fonte (15px → 8px) para garantir que o conteúdo caiba na etiqueta sem transbordar.
+🔧 Personalização
 
-Filtro por ID Simplificado
-Digite 1 → interpreta como CX-001
+Alterar o Logo
+Substitua o arquivo LogoEVB.png na raiz do projeto.
 
-Digite 01 → interpreta como CX-001
+Modificar Dimensões
+No arquivo styles.css, ajuste:
 
-Digite 001 → interpreta como CX-001
+.etiqueta-herbario {
+    width: 14cm;
+    height: 10cm;
+}
+Alterar Prefixo dos IDs
+No arquivo script.js, modifique:
 
-Digite CX-001 → mantém como está
+idInicio = 'CX-' + idInicio.padStart(3, '0');
 
-Geração de PDF
-Formato: A4 paisagem (297mm × 210mm)
+🤝 Contribuindo
+Faça um Fork do projeto
 
-Layout: 2 etiquetas por linha
+Crie uma Branch (git checkout -b feature/NovaFuncionalidade)
 
-Margens: 5mm
+Commit suas mudanças (git commit -m 'Adiciona funcionalidade')
 
-Alta qualidade (escala 2x no html2canvas)
+Push para a Branch (git push origin feature/NovaFuncionalidade)
+
+Abra um Pull Request
+
+📝 Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+👨‍💻 Autor
+Marlon Royer - Herbário Evaldo Buttura (EVB)
+
+EVB Labels © 2026 - Desenvolvido para a comunidade botânica
+
+Para salvar como arquivo .md:
+
+1. Copie todo o conteúdo acima
+2. Abra o Bloco de Notas ou qualquer editor de texto
+3. Cole o conteúdo
+4. Salve como `README.md` (certifique-se de selecionar "Todos os arquivos" no tipo)
+5. Coloque na raiz do seu projeto
+
+O arquivo está pronto para uso! 📄
